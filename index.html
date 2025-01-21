@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+    <style>
+      @font-face {
+        font-family: "Figtree";
+        src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "Figtree";
+        src: url("./assets/fonts/static/Figtree-ExtraBold.ttf")
+          format("truetype");
+        font-weight: 800;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Figtree", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: hsl(47, 88%, 63%);
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 50px;
+        height: 50px;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .card {
+        max-width: 350px;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 25%;
+        height: 500px;
+        background-color: white;
+        display: grid;
+        grid-template-rows: auto;
+        gap: 10px;
+        border: solid black 2px;
+        box-shadow: 10px 10px 10px rgb(0, 0, 0);
+      }
+      .cardimg {
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        border-radius: 15px;
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+      }
+      .cardtitle {
+        grid-row: 2;
+        grid-column: 1;
+        width: auto;
+        max-width: 30%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        font-size: 16px;
+        background-color: hsl(47, 88%, 63%);
+        font-weight: 800;
+      }
+      .date {
+        grid-row: 3;
+        grid-column: 1;
+        color: hsl(0, 0%, 7%);
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .head {
+        font-size: 20px;
+        grid-row: 4;
+        grid-column: 1 span 2;
+        font-weight: 800;
+        font-size: 25px;
+      }
+      .content {
+        grid-row: 5;
+        grid-column: 1 span 2;
+        color: hsl(0, 0%, 42%);
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .name {
+        grid-row: 6;
+        grid-column: 1;
+      }
+      .person {
+        grid-row: 6;
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+      }
+      img,
+      .person {
+        border-radius: 50%;
+        width: 30px;
+      }
+      .name {
+        font-size: 16 px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="./assets/images/illustration-article.svg"
+        alt="card photo"
+        class="cardimg"
+      />
+      <h2 class="cardtitle">Learning</h2>
+      <p class="date">Published 21 Dec 2023</p>
+      <h1 class="head">HTML & CSS foundations</h1>
+      <p class="content">
+        These languages are the backbone of every website, defining structure,
+        content, and presentation.
+      </p>
+      <div class="person">
+        <img src="./assets/images/image-avatar.webp" alt="" />
+        <p class="name">Greg Hooper</p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">omar refaat</a>.
+    </div>
+  </body>
+</html>
